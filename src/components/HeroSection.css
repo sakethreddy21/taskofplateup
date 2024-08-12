@@ -1,38 +1,118 @@
 .hero-section {
-    position: relative;
-    background-color: #f9f9f9;
-    padding: 20px;
-    display: flex;
+  position: relative;
+  background-color: #ffffff;
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  justify-content: space-between; /* Adjust to distribute space evenly */
+}
+
+.img-section{
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allows the content to take up remaining space */
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  color: #000000;
+  font-weight: 500;
+  align-items: center;
+  padding-top: 100px;
+  padding-left: 50px;
+  width: 599px;
+}
+
+.hero-content .highlight {
+  color: #5ca1e0;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  color: #707070;
+  align-items: center;
+  padding-left: 52px;
+  width: 599px;
+}
+/* Keyframes for scrolling animations */
+.hero-images-container1,
+.hero-images-container2 {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-images-container1,
+.hero-images-container2 {
+  animation: scroll 20s linear infinite;
+  gap: 20px;
+}
+
+.hero-images-container1 {
+  max-height: 605px;
+}
+
+.hero-images-container2 {
+  max-height: 500px;
+}
+
+/* Duplicate images */
+.hero-images-container1::before,
+.hero-images-container2::before {
+  content: "";
+  display: block;
+  width: 247px;
+  height: 100%;
+}
+
+.hero-images-container1 img,
+.hero-images-container2 img {
+  width: 247px;
+  height: 355px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero-images-container1 img:nth-of-type(1),
+.hero-images-container1 img:nth-of-type(2),
+.hero-images-container1 img:nth-of-type(3),
+.hero-images-container1 img:nth-of-type(4),
+.hero-images-container1 img:nth-of-type(5),
+.hero-images-container1 img:nth-of-type(6) {
+  animation: scrollDown 10s linear infinite;
+}
+
+.hero-images-container2 img:nth-of-type(1),
+.hero-images-container2 img:nth-of-type(2),
+.hero-images-container2 img:nth-of-type(3),
+.hero-images-container2 img:nth-of-type(4),
+.hero-images-container2 img:nth-of-type(5),
+.hero-images-container2 img:nth-of-type(6) {
+  animation: scrollUp 10s linear infinite;
+}
+
+/* Keyframes for scrolling animations */
+@keyframes scrollDown {
+  from {
+    transform: translateY(-100%);
   }
-  
-  .hero-content {
-    text-align: center;
+  to {
+    transform: translateY(0%);
   }
-  
-  .hero-content h1 {
-    font-size: 2.5em;
-    color: #333;
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(0%);
   }
-  
-  .hero-content .highlight {
-    color: #5ca1e0;
+  to {
+    transform: translateY(-100%);
   }
-  
-  .hero-content p {
-    font-size: 1.2em;
-    color: #666;
-  }
-  
-  .hero-images {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .hero-images img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
+}
