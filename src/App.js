@@ -10,6 +10,8 @@ function App() {
       <Navbar />
       <HeroSection />
      <SearchBar/>
+     <div class="tilted-strip"></div>
+
       <PillarsSection />
     </div>
   );
