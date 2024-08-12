@@ -47,19 +47,16 @@
   flex-direction: column;
   overflow: hidden;
   position: relative;
-}
-
-.hero-images-container1,
-.hero-images-container2 {
-  animation: scroll 20s linear infinite;
   gap: 20px;
 }
 
-.hero-images-container1 {
+
+
+.img-sec-1 {
   max-height: 605px;
 }
 
-.hero-images-container2 {
+.img-sec-2 {
   max-height: 500px;
 }
 
@@ -80,22 +77,24 @@
   border-radius: 10px;
 }
 
-.hero-images-container1 img:nth-of-type(1),
-.hero-images-container1 img:nth-of-type(2),
-.hero-images-container1 img:nth-of-type(3),
-.hero-images-container1 img:nth-of-type(4),
-.hero-images-container1 img:nth-of-type(5),
-.hero-images-container1 img:nth-of-type(6) {
-  animation: scrollDown 10s linear infinite;
+.hero-images-container1{
+  animation: scrollDown 35s linear infinite;
+  -webkit-animation: scrollDown 35s linear infinite;
 }
 
-.hero-images-container2 img:nth-of-type(1),
-.hero-images-container2 img:nth-of-type(2),
-.hero-images-container2 img:nth-of-type(3),
-.hero-images-container2 img:nth-of-type(4),
-.hero-images-container2 img:nth-of-type(5),
-.hero-images-container2 img:nth-of-type(6) {
-  animation: scrollUp 10s linear infinite;
+.hero-images-container2 {
+  animation: scrollUp 35s linear infinite;
+  -webkit-animation: scrollUp 35s linear infinite;
+}
+
+.img-sec-1{
+  overflow: hidden;
+    white-space: nowrap;
+}
+
+.img-sec-2{
+  overflow: hidden;
+    white-space: nowrap;
 }
 
 /* Keyframes for scrolling animations */
