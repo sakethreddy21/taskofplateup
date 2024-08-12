@@ -1,0 +1,38 @@
+.hero-section {
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5em;
+    color: #333;
+  }
+  
+  .hero-content .highlight {
+    color: #5ca1e0;
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .hero-images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .hero-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
