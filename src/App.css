@@ -1,6 +1,9 @@
+/* hide the scrollbar */
+
 .home{
     background-color: #ffffff;
-    
+    width: 100%;
+    height: 100%;
 }
 
 .tilted-strip {

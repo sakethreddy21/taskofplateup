@@ -1,0 +1,76 @@
+.pillars-section {
+  padding: 90px;
+}
+
+.pillars-prehead{
+  color: rgb(105, 100, 100);
+  margin-bottom: 25px;
+}
+
+.pillars-headsection{
+  font-size: 2em;
+  margin: 10px 0px 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pillars-head{
+  font-style: italic;
+}
+
+.pillars-tag{
+  color: rgb(108, 104, 104);
+}
+
+.pillars-navigation {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.pillars-navigation button {
+  padding: 9px 15px;
+  background-color: #f9f9f9;
+  border-color: rgb(217, 220, 222);
+  border-width: 1px;
+  border-radius: 20px;
+  color: rgb(116, 123, 129);
+  font-size: 1rem;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.pillars-navigation button:hover {
+  background-color: #060606;
+  color: white;
+}
+
+
+.pillars-cards {
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.pillars-slide {
+  display: flex;
+  gap: 20px;
+  width: calc(200%); /* Double the width for seamless scrolling */
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%); /* Move left by 50% to loop */
+  }
+}
+
+.pillars-cards:hover .pillars-slide {
+  animation-play-state: paused;
+}
