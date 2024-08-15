@@ -8,7 +8,7 @@ import "./App.css";
 import MobNavbar from "./components/mobile/MobNavbar";
 import MobHeroSection from "./components/mobile/MobHeroSection";
 import MobileImageSlider from "./components/mobile/MobileImageSlider";
-
+import MobilePillarsSection from "./components/mobile/MobilePillarsSection";
 function App() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -35,11 +35,14 @@ function App() {
     return(
       
       <div className="mob-home">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
         <MobNavbar/>
         <MobHeroSection/>
         <MobSearchBar/>
         <div className="mobile-tilted-strip"></div>
         <MobileImageSlider/>
+        <MobilePillarsSection/>
         </div>)
   } else {
     return (

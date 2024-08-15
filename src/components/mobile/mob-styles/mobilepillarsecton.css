@@ -1,0 +1,101 @@
+.mobpillars-section {
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    overflow: hidden; /* Ensure no overflow */
+    margin-top: 60px;
+    width: 105%;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  
+  .mobpillars-prehead{
+    display:flex;
+    justify-content: center;
+
+    color: rgb(105, 100, 100);
+    margin-bottom: 6px;
+  }
+  
+  .mobpillars-headsection{
+    font-size: 20px;
+    margin: 10px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .mobpillars-head {
+    font-style: italic;
+    font-size: 20px;
+    background: linear-gradient(289.5deg, #F1CA72 27.25%, #D96E6C 92.08%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+  }
+  
+  
+  .mobpillars-tag{
+    color: rgb(108, 104, 104);
+  }
+  
+  .mobpillars-navigation {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .mobpillars-navigation button {
+    padding: 9px 15px;
+    background-color: #f9f9f9;
+    border-color: rgb(217, 220, 222);
+    border-width: 1px;
+    border-radius: 20px;
+    color: rgb(116, 123, 129);
+    font-size: 1rem;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  
+  .mobpillars-navigation button:hover {
+    background-color: #060606;
+    color: white;
+  }
+  
+  
+  .mobpillars-cards {
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 90%;
+  }
+  
+  .mobpillars-slide {
+    display: flex;
+    gap: 20px;
+    /*Doublethewidthforseamlessscrolling*/animation: slide 35s linear infinite;
+    -webkit-animation: slide 35s linear infinite;
+  }
+  
+  @keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+  }
+  }
+  
+  .mobpillars-cards:hover .mobpillars-slide {
+    animation-play-state: paused;
+  }
+  

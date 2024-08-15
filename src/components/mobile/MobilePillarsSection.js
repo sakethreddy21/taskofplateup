@@ -1,28 +1,19 @@
-import React from "react";
-import PillarCard from "./PillarCard";
-import "./desk-styles/PillarsSection.css";
-
-function PillarsSection() {
+import React from 'react'
+import './mob-styles/mobilepillarsecton.css'
+import MobilePillarCard from './Mobilepillarcard'
+const MobilePillarSection = () => {
   return (
-    <section className="pillars-section">
-      <span className="pillars-prehead">HOW IT WORKS</span>
-      <div className="pillars-headsection">
-        <div>
-          <span className="pillars-head">Lifestyle as medicine: </span>
-          <span className="pillars-tag"> The six pillars</span>
+    <section className="mobpillars-section">
+      <span className="mobpillars-prehead">HOW IT WORKS</span>
+      <div className="mobpillars-headsection">
+        <div className='mobpillars-headertext'>
+          <span className="mobpillars-head">Lifestyle as medicine: </span>
+          <span className="mobpillars-tag"> The six pillars</span>
         </div>
       </div>
-      <div className="pillars-navigation">
-        <button>Nutrition</button>
-        <button>Physical activity</button>
-        <button>Restorative sleep</button>
-        <button>Stress management</button>
-        <button>Social connection</button>
-        <button>Substance abuse</button>
-      </div>
-      <div className="pillars-cards">
-        <div className="pillars-slide">
-          <PillarCard
+      <div className="mobpillars-cards">
+        <div className="mobpillars-slide">
+          <MobilePillarCard
             title="Nutrition"
             content="Evidence supports the use of a whole-food, plant-predominant diet to prevent, treat, and reverse chronic illness."
             imgpath="pic1.png"
@@ -70,7 +61,7 @@ function PillarsSection() {
             tag2="mmHg"
           />
 
-          <PillarCard
+         <MobilePillarCard
             title="Physical activity"
             content="Regular physical activity is key for managing weight, improving mental health, and reducing risk of chronic disease."
             imgpath="pic2.png"
@@ -78,7 +69,7 @@ function PillarsSection() {
             tag2="minutes"
             emj=""
           />
-          <PillarCard
+         <MobilePillarCard
             title="Restorative sleep"
             content="Consistent, adequate sleep is vital for your mental and physical health, along with emotional well-being."
             imgpath="pic3.png"
@@ -87,7 +78,7 @@ function PillarsSection() {
             emj=""
           />
 
-          <PillarCard
+         <MobilePillarCard
             title="Stress management"
             content="Regular physical activity is key for managing weight, improving mental health, and reducing risk of chronic disease."
             imgpath="pic4.png"
@@ -95,7 +86,7 @@ function PillarsSection() {
             tag2="bpm"
             emj=""
           />
-          <PillarCard
+         <MobilePillarCard
             title="Social Connection"
             content="Consistent, adequate sleep is vital for your mental and physical health, along with emotional well-being."
             imgpath="pic5.png"
@@ -104,7 +95,7 @@ function PillarsSection() {
             emj=""
           />
 
-          <PillarCard
+         <MobilePillarCard
             title="Substance abuse"
             content="Consistent, adequate sleep is vital for your mental and physical health, along with emotional well-being."
             imgpath="pic6.png"
@@ -114,8 +105,8 @@ function PillarsSection() {
           />
         </div>
 
-        <div className="pillars-slide">
-          <PillarCard
+        <div className="mobpillars-slide">
+         <MobilePillarCard
             title="Nutrition"
             content="Evidence supports the use of a whole-food, plant-predominant diet to prevent, treat, and reverse chronic illness."
             imgpath="pic1.png"
@@ -163,7 +154,7 @@ function PillarsSection() {
             tag2="mmHg"
           />
 
-          <PillarCard
+         <MobilePillarCard
             title="Physical activity"
             content="Regular physical activity is key for managing weight, improving mental health, and reducing risk of chronic disease."
             imgpath="pic2.png"
@@ -171,7 +162,7 @@ function PillarsSection() {
             tag2="minutes"
             emj=""
           />
-          <PillarCard
+         <MobilePillarCard
             title="Restorative sleep"
             content="Consistent, adequate sleep is vital for your mental and physical health, along with emotional well-being."
             imgpath="pic3.png"
@@ -180,7 +171,7 @@ function PillarsSection() {
             emj=""
           />
 
-          <PillarCard
+         <MobilePillarCard
             title="Stress management"
             content="Regular physical activity is key for managing weight, improving mental health, and reducing risk of chronic disease."
             imgpath="pic4.png"
@@ -188,7 +179,7 @@ function PillarsSection() {
             tag2="bpm"
             emj=""
           />
-          <PillarCard
+         <MobilePillarCard
             title="Social Connection"
             content="Consistent, adequate sleep is vital for your mental and physical health, along with emotional well-being."
             imgpath="pic5.png"
@@ -197,7 +188,7 @@ function PillarsSection() {
             emj=""
           />
 
-          <PillarCard
+         <MobilePillarCard
             title="Substance abuse"
             content="Consistent, adequate sleep is vital for your mental and physical health, along with emotional well-being."
             imgpath="pic6.png"
@@ -210,5 +201,4 @@ function PillarsSection() {
     </section>
   );
 }
-
-export default PillarsSection;
+export default MobilePillarSection

@@ -1,0 +1,64 @@
+.mobpillar-card {
+    
+    background-color: white;
+    width:28%;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+   .mobcard-content {
+    padding: 20px;
+  
+  }
+  
+  .mobpillar-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    
+  }
+  
+  .mobpillar-card p {
+    font-size: 1.2rem;
+    color: #9b9797; 
+    white-space: normal;  
+    line-height: 30px;
+  }
+  
+  
+  .mobcard-img{
+   width:320px
+  }
+  
+  .mobpillar-imgcontainer{
+    position: relative;
+  }
+  
+  .mobpillar-tag{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    bottom: 25px;
+    left: 25px;
+    padding: 7px 14px;
+    border-radius: 30px;
+    background-color: rgb(217, 220, 222);
+  }
+  
+  .mobtag-svg{
+    width: 24px;
+    margin-right: 2px;
+  }
+  
+  .mobtag-detail-1{
+    color: black;
+    font-size: 1.2rem;
+    margin-right: 4px;
+    font-weight: bold;
+  }
+  
+  .mobtag-detail-2{
+    color: #918d8d;
+  
+  }

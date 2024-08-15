@@ -1,5 +1,5 @@
 import React from 'react';
-import './mobsearchbar.css';
+import './mob-styles/mobsearchbar.css';
 import { Search, MapPin, IdCard } from 'lucide-react';
 
 function MobileSearchBar() {

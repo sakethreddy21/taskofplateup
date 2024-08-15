@@ -1,5 +1,5 @@
 import React from 'react';
-import './mobhero.css';
+import './mob-styles/mobhero.css';
 
 function MobHeroSection() {
   return (

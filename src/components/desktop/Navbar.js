@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Navbar.css";
+import "./desk-styles/Navbar.css";
 import { ChevronRight } from "lucide-react";
 
 function Navbar() {

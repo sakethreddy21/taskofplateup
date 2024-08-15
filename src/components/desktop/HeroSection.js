@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/HeroSection.css';
 
+import './desk-styles/HeroSection.css';
 function HeroSection() {
   return (
     <section className="hero-section">

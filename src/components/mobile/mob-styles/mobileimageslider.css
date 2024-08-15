@@ -1,0 +1,51 @@
+
+  
+  .mobhero-section {
+    position: relative;
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    overflow: hidden; /* Ensure no overflow */
+    margin-top: 40px;
+  }
+  
+  .mobimg-section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .mobimg-sec-1 {
+    display: flex;
+    overflow: hidden;
+    max-height: 605px;
+    gap: 20px;
+    flex-direction: row;
+  }
+  
+  .mobhero-images-container1 {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 20px;
+    animation: slide 15s linear infinite;
+   /* Ensure it doesn't exceed viewport width */
+  }
+  
+  .mobhero-images-container1 img {
+    width: auto; /* Maintain aspect ratio */
+    height: 355px;
+    border-radius: 10px;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

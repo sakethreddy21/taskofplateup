@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './mobnavbar.css'
+import './mob-styles/mobnavbar.css'
 import { ChevronRight } from "lucide-react";
 
 function MobNavbar() {
@@ -22,6 +22,7 @@ function MobNavbar() {
  
 
   return (
+    <div className="mobile-nav">
     <nav className="mobnavbar">
       <div className="mobnavbar-logosection">
         <div className="mobnavbar-logo">
@@ -101,6 +102,7 @@ function MobNavbar() {
         </ul>
       
     </nav>
+    </div>
   );
 }
 

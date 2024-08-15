@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/PillarCard.css';
+import './desk-styles/PillarCard.css';
 
 function PillarCard({ title, content ,imgpath ,emj,tag1,tag2 }) {
   return (
