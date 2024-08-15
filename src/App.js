@@ -7,6 +7,7 @@ import MobSearchBar from "./components/mobile/MobSearchBar";
 import "./App.css";
 import MobNavbar from "./components/mobile/MobNavbar";
 import MobHeroSection from "./components/mobile/MobHeroSection";
+import MobileImageSlider from "./components/mobile/MobileImageSlider";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -38,6 +39,7 @@ function App() {
         <MobHeroSection/>
         <MobSearchBar/>
         <div className="mobile-tilted-strip"></div>
+        <MobileImageSlider/>
         </div>)
   } else {
     return (
