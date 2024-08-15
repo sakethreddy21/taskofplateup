@@ -50,6 +50,7 @@
   overflow: hidden;
   padding: 10px;
   display: flex;
+  gap: 20px;
   flex-wrap: nowrap;
   position: relative;
   width: 100%;
@@ -58,8 +59,9 @@
 .pillars-slide {
   display: flex;
   gap: 20px;
-  width: calc(200%); /* Double the width for seamless scrolling */
-  animation: slide 20s linear infinite;
+  width: calc(240%);
+  /*Doublethewidthforseamlessscrolling*/animation: slide 35s linear infinite;
+  -webkit-animation: slide 35s linear infinite;
 }
 
 @keyframes slide {
@@ -67,8 +69,12 @@
       transform: translateX(0);
   }
   to {
-      transform: translateX(-50%); /* Move left by 50% to loop */
-  }
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+}
 }
 
 .pillars-cards:hover .pillars-slide {

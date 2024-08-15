@@ -94,10 +94,7 @@
   color: #5ca1e0;
 }
 
-/* Show links when menu is active */
-.navbar-links.active {
-  display: flex;
-}
+
 
 /* Mobile menu icon */
 .navbar-menu-icon {
@@ -131,7 +128,7 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (min-width: 769px) {
+
   .navbar-links {
     display: flex;
     flex-direction: row;
@@ -149,7 +146,7 @@
   .navbar-menu-icon {
     display: none;
   }
-}
+
 
 
   /* Add this to your existing CSS */

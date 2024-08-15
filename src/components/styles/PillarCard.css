@@ -28,8 +28,7 @@
 
 
 .card-img{
- width: 580px;
- height:350px; 
+ width:min-content
 }
 
 .pillar-imgcontainer{
