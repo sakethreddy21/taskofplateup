@@ -33,12 +33,12 @@
 }
   
 .mobile-tilted-strip {
-  width: 100%;
+  width: 600px;
   height: 35px;
   /*Adjustheightasneeded*/background: linear-gradient(to right, #ffbc70, #ff7061);
   /*Gradientcolors*/transform: rotate(-1deg);
   /*Adjustangleoftilt*/position: absolute;
-  top: 33%;
+  top: 450px;
 
 ;
   -webkit-transform: rotate(-2deg);
