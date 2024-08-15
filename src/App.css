@@ -3,7 +3,11 @@
     /* Mobile-specific styles */
     .home {
       display: none;
-      width: 100%;
+    }
+    .mob-home {
+      display: flex;
+      flex-direction: column;
+    width: 100%;
       height: 100%;
     }
   }
@@ -15,7 +19,7 @@
 }
 
 .tilted-strip {
-    width: 100%;
+    width: 400px;
     height: 35px;
     /*Adjustheightasneeded*/background: linear-gradient(to right, #ffbc70, #ff7061);
     /*Gradientcolors*/transform: rotate(-1deg);
@@ -28,3 +32,21 @@
     -o-transform: rotate(-2deg);
 }
   
+.mobile-tilted-strip {
+  width: 100%;
+  height: 35px;
+  /*Adjustheightasneeded*/background: linear-gradient(to right, #ffbc70, #ff7061);
+  /*Gradientcolors*/transform: rotate(-1deg);
+  /*Adjustangleoftilt*/position: absolute;
+  top: 33%;
+
+;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+}
+
+.mob-home{
+    background-color: #ffffff;
+}

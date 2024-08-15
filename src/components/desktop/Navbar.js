@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import "./styles/Navbar.css";
+import React, { useState } from "react";
+import "../styles/Navbar.css";
 import { ChevronRight } from "lucide-react";
-import MobileMenu from "./MobileMenu"
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
