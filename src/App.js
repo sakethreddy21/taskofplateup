@@ -13,22 +13,27 @@ function App() {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
+  
     // Initial check
     handleResize();
-
+  
     // Add event listener for window resize
     window.addEventListener('resize', handleResize);
-
+  
     // Clean up event listener on unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  
+  console.log("isMobile:", isMobile); // Check the value of isMobile
+  
 
   if (isMobile) {
     return <MobileComponent />;
   }
+
+  else{
 
   return (
     <div className='home'>
@@ -39,6 +44,7 @@ function App() {
       <PillarsSection />
     </div>
   );
+}
 }
 
 export default App;
