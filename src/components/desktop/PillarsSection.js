@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import PillarCard from "./PillarCard";
 import "./desk-styles/PillarsSection.css";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 function PillarsSection() {
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const handlePrevSlide = () => {
+    setSlideIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : 0
+    );
+  };
+
+  const handleNextSlide = () => {
+    setSlideIndex((prevIndex) =>
+      prevIndex < 1 ? prevIndex + 1 : 1 // Assuming there are 2 slides (index 0 and 1)
+    );
+  };
+
   return (
     <section className="pillars-section">
       <span className="pillars-prehead">HOW IT WORKS</span>
@@ -10,6 +25,14 @@ function PillarsSection() {
         <div>
           <span className="pillars-head">Lifestyle as medicine: </span>
           <span className="pillars-tag"> The six pillars</span>
+        </div>
+        <div className="pillars-navigation-icons">
+          <div className="icon-wrapper" onClick={handlePrevSlide}>
+            <ArrowLeft color="#747474" size={20} className="pillars-icon" />
+          </div>
+          <div className="icon-wrapper" onClick={handleNextSlide}>
+            <ArrowRight color="#747474" size={20} className="pillars-icon" />
+          </div>
         </div>
       </div>
       <div className="pillars-navigation">
@@ -21,51 +44,15 @@ function PillarsSection() {
         <button>Substance abuse</button>
       </div>
       <div className="pillars-cards">
-        <div className="pillars-slide">
+        <div
+          className="pillars-slide"
+          style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+        >
           <PillarCard
             title="Nutrition"
             content="Evidence supports the use of a whole-food, plant-predominant diet to prevent, treat, and reverse chronic illness."
             imgpath="pic1.png"
-            emj={
-              <svg
-                viewBox="0 -2 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  {" "}
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M18.2627 26.9922L29.2549 16C31.085 14.1699 32 11.9607 32 9.37258C32 6.78442 31.085 4.57528 29.2549 2.74517C27.4247 0.915055 
-                            25.2155 0 22.6274 0C20.0392 0 17.8301 0.915055 16 2.74517C14.1699 0.915055 11.9607 0 9.37258 0C6.78442 0 4.57528 0.915055 2.74517 2.74517C0.915056 4.57528 0 6.78442 0 9.37258C0 11.9607 0.915056 14.1699 
-                            2.74517 16L13.7373 26.9922C14.9869 28.2418 17.0131 28.2418 18.2627 26.9922Z"
-                    fill="url(#paint0_radial_103_1602)"
-                  ></path>{" "}
-                  <defs>
-                    {" "}
-                    <radialGradient
-                      id="paint0_radial_103_1602"
-                      cx="0"
-                      cy="0"
-                      r="1"
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(8.07998 9.66157) rotate(59.8757) scale(18.7297 20.4872)"
-                    >
-                      {" "}
-                      <stop stop-color="#FFAA00"></stop>{" "}
-                      <stop offset="1" stop-color="#F05206"></stop>{" "}
-                    </radialGradient>{" "}
-                  </defs>{" "}
-                </g>
-              </svg>
-            }
+            emj={<img src="/cardicons/img1.png" alt="emg1" />}
             tag1="121/80"
             tag2="mmHg"
           />
@@ -76,7 +63,7 @@ function PillarsSection() {
             imgpath="pic2.png"
             tag1="32"
             tag2="minutes"
-            emj=""
+            emj={<img src="/cardicons/img2.png" alt="emg1" />}
           />
           <PillarCard
             title="Restorative sleep"
@@ -84,7 +71,7 @@ function PillarsSection() {
             imgpath="pic3.png"
             tag1="8"
             tag2="hours"
-            emj=""
+            emj={<img src="/cardicons/img3.png" alt="emg1" />}
           />
 
           <PillarCard
@@ -93,7 +80,7 @@ function PillarsSection() {
             imgpath="pic4.png"
             tag1="60"
             tag2="bpm"
-            emj=""
+            emj={<img src="/cardicons/img4.png" alt="emg1" />}
           />
           <PillarCard
             title="Social Connection"
@@ -101,7 +88,7 @@ function PillarsSection() {
             imgpath="pic5.png"
             tag1="Feeling"
             tag2="better"
-            emj=""
+            emj={<img src="/cardicons/img2.png" alt="emg1" />}
           />
 
           <PillarCard
@@ -110,55 +97,19 @@ function PillarsSection() {
             imgpath="pic6.png"
             tag1="62"
             tag2="days"
-            emj=""
+            emj={<img src="/cardicons/img5.png" alt="emg1" />}
           />
         </div>
 
-        <div className="pillars-slide">
+        <div
+          className="pillars-slide"
+          style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+        >
           <PillarCard
             title="Nutrition"
             content="Evidence supports the use of a whole-food, plant-predominant diet to prevent, treat, and reverse chronic illness."
             imgpath="pic1.png"
-            emj={
-              <svg
-                viewBox="0 -2 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  {" "}
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M18.2627 26.9922L29.2549 16C31.085 14.1699 32 11.9607 32 9.37258C32 6.78442 31.085 4.57528 29.2549 2.74517C27.4247 0.915055 
-                            25.2155 0 22.6274 0C20.0392 0 17.8301 0.915055 16 2.74517C14.1699 0.915055 11.9607 0 9.37258 0C6.78442 0 4.57528 0.915055 2.74517 2.74517C0.915056 4.57528 0 6.78442 0 9.37258C0 11.9607 0.915056 14.1699 
-                            2.74517 16L13.7373 26.9922C14.9869 28.2418 17.0131 28.2418 18.2627 26.9922Z"
-                    fill="url(#paint0_radial_103_1602)"
-                  ></path>{" "}
-                  <defs>
-                    {" "}
-                    <radialGradient
-                      id="paint0_radial_103_1602"
-                      cx="0"
-                      cy="0"
-                      r="1"
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(8.07998 9.66157) rotate(59.8757) scale(18.7297 20.4872)"
-                    >
-                      {" "}
-                      <stop stop-color="#FFAA00"></stop>{" "}
-                      <stop offset="1" stop-color="#F05206"></stop>{" "}
-                    </radialGradient>{" "}
-                  </defs>{" "}
-                </g>
-              </svg>
-            }
+            emj={<img src="/cardicons/img1.png" alt="emg1" />}
             tag1="121/80"
             tag2="mmHg"
           />
@@ -169,7 +120,7 @@ function PillarsSection() {
             imgpath="pic2.png"
             tag1="32"
             tag2="minutes"
-            emj=""
+            emj={<img src="/cardicons/img2.png" alt="emg1" />}
           />
           <PillarCard
             title="Restorative sleep"
@@ -177,7 +128,7 @@ function PillarsSection() {
             imgpath="pic3.png"
             tag1="8"
             tag2="hours"
-            emj=""
+            emj={<img src="/cardicons/img3.png" alt="emg1" />}
           />
 
           <PillarCard
@@ -186,7 +137,7 @@ function PillarsSection() {
             imgpath="pic4.png"
             tag1="60"
             tag2="bpm"
-            emj=""
+            emj={<img src="/cardicons/img4.png" alt="emg1" />}
           />
           <PillarCard
             title="Social Connection"
@@ -194,7 +145,7 @@ function PillarsSection() {
             imgpath="pic5.png"
             tag1="Feeling"
             tag2="better"
-            emj=""
+            emj={<img src="/cardicons/img2.png" alt="emg1" />}
           />
 
           <PillarCard
@@ -203,7 +154,7 @@ function PillarsSection() {
             imgpath="pic6.png"
             tag1="62"
             tag2="days"
-            emj=""
+            emj={<img src="/cardicons/img5.png" alt="emg1" />}
           />
         </div>
       </div>

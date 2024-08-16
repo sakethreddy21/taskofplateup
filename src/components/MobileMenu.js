@@ -4,10 +4,7 @@ const MobileMenu = () => {
   return (
     <div>
         
-        
-        MobileMenu
-        sjjjjjjjjjjjjjjjjjjjjjjjjjj
-        sjjjjjjjjjjjjjjjj
+    
     </div>
   )
 }
